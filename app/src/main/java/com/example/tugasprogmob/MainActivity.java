@@ -2,6 +2,7 @@ package com.example.tugasprogmob;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         myBtn.setOnClickListener(myBtnClickListener);
+
+        Button helpBtn = (Button)findViewById(R.id.helpButton);
+        helpBtn.setOnClickListener(helpButtonListener);
+
+        if(savedInstanceState != null){
+            Log.d("TugasProgmob",savedInstanceState.getString("QWERTY"));
+        }
     }
 
     private View.OnClickListener myBtnClickListener = new View.OnClickListener()
@@ -39,6 +47,22 @@ public class MainActivity extends AppCompatActivity {
             Log.d("TugasProgmob",myEditText.getText().toString());
         }
     };
+
+    private View.OnClickListener helpButtonListener = new View.OnClickListener()
+    {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this,HelpActivity.class);
+            startActivity(intent);
+        }
+    };
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("QWERTY","Test1");
+        super.onSaveInstanceState(outState);
+    }
 
 
 
