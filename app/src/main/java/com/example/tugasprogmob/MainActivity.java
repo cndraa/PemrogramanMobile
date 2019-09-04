@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText myEditText = findViewById(R.id.editText1);
         Button myBtn = findViewById(R.id.button1);
         Button btnHelp = findViewById(R.id.helpButton);
+        Button btnLayout = findViewById(R.id.buttonLayout);
 
 
         textView.setText(R.string.Test_untuk_Update_View);
@@ -42,7 +43,15 @@ public class MainActivity extends AppCompatActivity {
         btnHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, HelpActivity.class); //intent untuk berpindah activity
+                Intent intent = new Intent(MainActivity.this, HelpActivity.class); //intent untuk berpindah Helpactivity
+                startActivity(intent);
+            }
+        });
+
+        btnLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Main2Activity.class); //intent untuk berpindah Main2activity
                 startActivity(intent);
             }
         });
