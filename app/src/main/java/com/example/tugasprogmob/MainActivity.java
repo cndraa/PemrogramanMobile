@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Button myBtn = findViewById(R.id.button1);
         Button btnHelp = findViewById(R.id.helpButton);
         Button btnLayout = findViewById(R.id.buttonLayout);
-
+        Button btnApp = findViewById(R.id.buttonAppTracker);
 
         textView.setText(R.string.Test_untuk_Update_View);
         myBtn.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class); //intent untuk berpindah Main2activity
+                startActivity(intent);
+            }
+        });
+
+        btnApp.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, Main3Activity.class); //intent untuk berpindah Main3activity
                 startActivity(intent);
             }
         });
