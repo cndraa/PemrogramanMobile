@@ -79,4 +79,16 @@
         app:layout_constraintEnd_toStartOf="@+id/helpButton"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
+    <Button
+        android:id="@+id/buttonFragmen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragmen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAppTracker"
+        app:layout_constraintVertical_bias="0.26" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

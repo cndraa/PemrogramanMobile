@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnHelp = findViewById(R.id.helpButton);
         Button btnLayout = findViewById(R.id.buttonLayout);
         Button btnApp = findViewById(R.id.buttonAppTracker);
+        Button btnFragmen = findViewById(R.id.buttonFragmen);
 
         textView.setText(R.string.Test_untuk_Update_View);
         myBtn.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +61,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(MainActivity.this, Main3Activity.class); //intent untuk berpindah Main3activity
+                startActivity(intent);
+            }
+        });
+
+        btnFragmen.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, FragmenActivity.class); //intent untuk berpindah Main3activity
                 startActivity(intent);
             }
         });
