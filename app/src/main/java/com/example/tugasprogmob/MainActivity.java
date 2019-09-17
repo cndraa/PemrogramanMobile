@@ -1,6 +1,7 @@
 package com.example.tugasprogmob;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnLayout = findViewById(R.id.buttonLayout);
         Button btnApp = findViewById(R.id.buttonAppTracker);
         Button btnFragmen = findViewById(R.id.buttonFragmen);
+        Button btnMahasiswa = findViewById(R.id.btnMahasiswa);
 
         textView.setText(R.string.Test_untuk_Update_View);
         myBtn.setOnClickListener(new View.OnClickListener() {
@@ -73,11 +75,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnHelp.setOnClickListener(helpButtonListener);
-
         if(savedInstanceState != null){
             Log.d("Progmob A",savedInstanceState.getString("abc"));
         }
+
+        btnMahasiswa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MahasiswaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        btnHelp.setOnClickListener(helpButtonListener);
+
+
     }
 
     private View.OnClickListener helpButtonListener = new View.OnClickListener() {
