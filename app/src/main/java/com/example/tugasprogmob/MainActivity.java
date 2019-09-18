@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnApp = findViewById(R.id.buttonAppTracker);
         Button btnFragmen = findViewById(R.id.buttonFragmen);
         Button btnMahasiswa = findViewById(R.id.btnMahasiswa);
+        Button btnLst = findViewById(R.id.btnList);
 
         textView.setText(R.string.Test_untuk_Update_View);
         myBtn.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +84,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, MahasiswaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnLst.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ListActivity.class);
                 startActivity(intent);
             }
         });
