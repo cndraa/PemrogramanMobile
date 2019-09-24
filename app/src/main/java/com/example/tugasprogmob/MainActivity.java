@@ -1,7 +1,6 @@
 package com.example.tugasprogmob;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView textView = findViewById(R.id.mainActivityTextView);
         final EditText myEditText = findViewById(R.id.editText1);
-        Button myBtn = findViewById(R.id.button1);
+        Button myBtn = findViewById(R.id.btnKelolaMhs);
         Button btnHelp = findViewById(R.id.helpButton);
         Button btnLayout = findViewById(R.id.buttonLayout);
         Button btnApp = findViewById(R.id.buttonAppTracker);
@@ -92,6 +91,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        myBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ListMhsActivity.class);
                 startActivity(intent);
             }
         });

@@ -19,10 +19,10 @@
         app:layout_constraintVertical_bias="0.049" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnKelolaMhs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button"
+        android:text="Kelola Mahasiswa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -37,8 +37,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/name"
-        app:layout_constraintBottom_toTopOf="@+id/button1"
-        app:layout_constraintEnd_toStartOf="@+id/button1"
+        app:layout_constraintBottom_toTopOf="@+id/btnKelolaMhs"
+        app:layout_constraintEnd_toStartOf="@+id/btnKelolaMhs"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/btnKelolaMhs"
         app:layout_constraintVertical_bias="0.127" />
 
     <Button
@@ -66,7 +66,7 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonAppTracker"
         app:layout_constraintHorizontal_bias="0.573"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/btnKelolaMhs"
         app:layout_constraintVertical_bias="0.127" />
 
     <Button
@@ -77,7 +77,7 @@
         android:layout_marginEnd="24dp"
         android:text="TrackerApp"
         app:layout_constraintEnd_toStartOf="@+id/helpButton"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintTop_toBottomOf="@+id/btnKelolaMhs" />
 
     <Button
         android:id="@+id/buttonFragmen"
@@ -108,7 +108,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="List Maha"
-        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintBottom_toTopOf="@+id/btnKelolaMhs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
