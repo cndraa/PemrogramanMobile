@@ -33,9 +33,10 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     private void addData(){
         mahasiswaArrayList = new ArrayList<>();
-        mahasiswaArrayList.add(new Mahasiswa("Didimus", "7217019", "08273636272736"));
-        mahasiswaArrayList.add(new Mahasiswa("Didimus", "7217019", "08273636272736"));
-        mahasiswaArrayList.add(new Mahasiswa("Didimus", "7217019", "08273636272736"));
-        mahasiswaArrayList.add(new Mahasiswa("Didimus", "7217019", "08273636272736"));
+        mahasiswaArrayList.add(new Mahasiswa(R.drawable.ic_launcher_background,"Didimus Candra","72170139","Laki-Laki","Basket","Pebisnis","Selalu Bersyukur"));
+        mahasiswaArrayList.add(new Mahasiswa(R.drawable.ic_launcher_background,"Beni Mulia","72170177","Laki-Laki","Basket","Programmer","Nikmati Hasil"));
+        mahasiswaArrayList.add(new Mahasiswa(R.drawable.ic_launcher_background,"Aryawan Ravato","72170115","Laki-Laki","Bermain Barongsay dan Liong","Programmer","Teruslah berproses, meski itu berat"));
+        mahasiswaArrayList.add(new Mahasiswa(R.drawable.ic_launcher_background,"Monica Carista","72170187","Perempuan","Balapan","Programmer","Berproses Itu Indah"));
+        mahasiswaArrayList.add(new Mahasiswa(R.drawable.ic_launcher_background,"Eva Kristina","72170102","Perempuan","Makan","Pengusaha Kios","Nikmati Proses"));
     }
 }
