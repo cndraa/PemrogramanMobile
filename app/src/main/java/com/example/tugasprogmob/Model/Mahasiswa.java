@@ -1,7 +1,6 @@
 package com.example.tugasprogmob.Model;
 
 public class Mahasiswa {
-
     private int foto;
     private String nama;
     private String nim;

@@ -9,24 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MenuActivity"></activity>
-        <activity android:name=".RecyclerViewActivity"></activity>
+        <activity android:name=".DialogActivity"></activity>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".RecyclerViewActivity" />
         <activity android:name=".AddMhsActivity" />
         <activity android:name=".UpdateMhsActivity" />
-        <activity android:name=".ListMhsActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+        <activity android:name=".ListMhsActivity"></activity>
         <activity android:name=".ListActivity" />
         <activity android:name=".MahasiswaActivity" />
         <activity android:name=".FragmenActivity" />
         <activity android:name=".Main3Activity" />
-        <activity android:name=".Main2Activity" />
+        <activity android:name=".Main2Activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".HelpActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity">
+        </activity>
     </application>
 
 </manifest>
