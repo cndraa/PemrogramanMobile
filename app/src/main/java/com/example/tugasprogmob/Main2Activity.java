@@ -4,6 +4,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +21,30 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         Button resetButton = (Button)findViewById(R.id.btnReset);
+        Button setButton = (Button)findViewById(R.id.btnSetting);
+        Button loginButton = (Button)findViewById(R.id.btnLogin);
+
+        SharedPreferences prefs = Main2Activity.this.getSharedPreferences("prefs_file",MODE_PRIVATE);
+        String statusLogin = prefs.getString("isLogin",null);
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences prefs =
+                        Main2Activity.this.getSharedPreferences("prefs_file",MODE_PRIVATE);
+                String statusLogin = prefs.getString("isLogin",null); SharedPreferences.Editor edit = prefs.edit();
+                Button btnLogin = (Button)findViewById(R.id.btnLogin); if (statusLogin != null){
+                    edit.putString("isLogin",null);
+                    btnLogin.setText("Login"); }else{
+                    edit.putString("isLogin","Admin");
+                    btnLogin.setText("Logout"); }
+                edit.commit();
+            }
+        });
+        if (statusLogin != null){ loginButton.setText("Logout");
+        }else{ loginButton.setText("Login");
+        }
+
 
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,5 +67,15 @@ public class Main2Activity extends AppCompatActivity {
                 dialog.show();
             }
         });
+
+        setButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Main2Activity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
